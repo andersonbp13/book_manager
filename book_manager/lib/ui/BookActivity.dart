@@ -36,6 +36,7 @@ class _BookActivityState extends State<BookActivity> {
       child: FutureBuilder(
         future: restServices.getBook(id).then((value) {
           book = value;
+          print(book.toString());
         }),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
@@ -83,7 +84,6 @@ class _BookActivityState extends State<BookActivity> {
                     onPressed: _goBack,
                     color: widget.themeProperties.colorMap["iconLight"],
                   ),
-                  //automaticallyImplyLeading: false,
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[

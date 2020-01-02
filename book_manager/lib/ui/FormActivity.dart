@@ -40,7 +40,6 @@ class _FormActivityState extends State<FormActivity> {
               onPressed: _goBack,
               color: widget.themeProperties.colorMap["iconLight"],
             ),
-            //automaticallyImplyLeading: false,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
