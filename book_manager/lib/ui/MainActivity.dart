@@ -200,7 +200,7 @@ class _MainActivityState extends State<MainActivity> {
               IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: widget.themeProperties.colorMap["iconDark"],
-                  tooltip: 'Show information',
+                  tooltip: 'Show information', //posibilidad de usar tooltip con el icono de hijo
                   iconSize: 35)
             ]),
         onPressed: () {

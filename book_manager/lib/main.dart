@@ -38,8 +38,6 @@ class MyApp extends StatelessWidget {
         new FloatingActionButtonThemeData(
             backgroundColor: themeProperties.colorMap["appButtons"], elevation: 10);
 
-    //style: Theme.of(context).textTheme.display1
-
     return MaterialApp(
       title: 'Flutter example',
       theme: ThemeData.light().copyWith(

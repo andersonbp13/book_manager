@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = Main.class)
 @ContextConfiguration(classes = {TestConfig.class})
 public abstract class BaseFT {
 

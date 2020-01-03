@@ -23,6 +23,11 @@ class _BookActivityState extends State<BookActivity> {
       CameraPosition(target: LatLng(6.2786293, -75.540737), zoom: 13);
   Completer<GoogleMapController> _controller = Completer();
 
+  Marker marker = Marker(
+      markerId: MarkerId('test marker'), position: LatLng(6.2786293, -75.540737));
+
+  Set<Marker> markers = new Set();
+
   int id;
   Book book;
 
@@ -30,6 +35,7 @@ class _BookActivityState extends State<BookActivity> {
   Widget build(BuildContext context) {
     args = ModalRoute.of(context).settings.arguments;
     id = args["id"];
+    markers.add(marker);
 
     return WillPopScope(
       onWillPop: _goBack,
@@ -58,18 +64,25 @@ class _BookActivityState extends State<BookActivity> {
                           height: 200,
                         ),
                         RawMaterialButton(
-                          child: Icon(Icons.refresh, color: widget.themeProperties.colorMap["iconLight"] ,),
+                          child: Icon(
+                            Icons.refresh,
+                            color: widget.themeProperties.colorMap["iconLight"],
+                          ),
                           onPressed: () {
                             setState(() {});
                             return;
-                          }, shape: new CircleBorder(),fillColor: widget.themeProperties.colorMap["appButtons"],
+                          },
+                          shape: new CircleBorder(),
+                          fillColor:
+                              widget.themeProperties.colorMap["appButtons"],
                         ),
                         Expanded(
                           child: Container(
                             padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                             child: Text(
                               "Something went wrong, press the button to reload.",
-                              style: widget.themeProperties.textStyleMap["text"],
+                              style:
+                                  widget.themeProperties.textStyleMap["text"],
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -183,13 +196,13 @@ class _BookActivityState extends State<BookActivity> {
                               ),
                               SizedBox(
                                 child: GoogleMap(
-                                  onMapCreated:
-                                      (GoogleMapController controller) {
+                                  onMapCreated: (GoogleMapController controller) {
                                     if (!_controller.isCompleted) {
                                       _controller.complete(controller);
                                     }
                                   },
                                   initialCameraPosition: _initialPosition,
+                                  markers: markers,
                                 ),
                                 width: 340,
                                 height: 320,

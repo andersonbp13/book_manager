@@ -19,30 +19,30 @@ public class RequestController {
     private BookService bookService;
 
     @RequestMapping(value = "/books", method = RequestMethod.GET)
-    public ResponseEntity getBooks() {
+    public ResponseEntity<?> getBooks() {
         return ResponseEntity.ok(bookService.findAllBooks());
     }
 
     @RequestMapping(value = "/books/{id}", method = RequestMethod.GET)
-    public ResponseEntity getBookById(@PathVariable("id") Long id) {
+    public ResponseEntity<?> getBookById(@PathVariable("id") Long id) {
         Preconditions.checkArgument(id != null, "id is not valid.");
         return ResponseEntity.ok(bookService.findBookById(id));
     }
 
     @RequestMapping(value = "/books", method = RequestMethod.POST)
-    public ResponseEntity saveBook(@RequestBody BookDTO bookDTO) {
+    public ResponseEntity<?> saveBook(@RequestBody BookDTO bookDTO) {
         Preconditions.checkArgument(bookDTO != null, "body is not valid.");
         return ResponseEntity.ok(bookService.saveBook(bookDTO));
     }
 
     @RequestMapping(value = "/books/{id}", method = RequestMethod.PUT)
-    public ResponseEntity updateBook(@PathVariable("id") Long id, @RequestBody BookDTO bookDTO) {
+    public ResponseEntity<?> updateBook(@PathVariable("id") Long id, @RequestBody BookDTO bookDTO) {
         Preconditions.checkArgument(id != null && bookDTO !=null, "id or body is not valid.");
         return ResponseEntity.ok(bookService.updateBook(bookDTO, id));
     }
 
     @RequestMapping(value = "/books/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity deleteBook(@PathVariable("id") Long id) {
+    public ResponseEntity<?> deleteBook(@PathVariable("id") Long id) {
         Preconditions.checkArgument(id != null, "id is not valid.");
         return ResponseEntity.ok(bookService.deleteBook(id));
     }

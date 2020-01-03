@@ -6,19 +6,12 @@ import bookapi.repositories.BookRepository;
 import io.restassured.RestAssured;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
 import static org.hamcrest.Matchers.equalTo;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = Main.class)
-@ContextConfiguration(classes = {TestConfig.class})
 public class BookAPIFT extends BaseFT {
 
     @Autowired
@@ -29,7 +22,7 @@ public class BookAPIFT extends BaseFT {
 
         List<Book> book = bookRepository.findAll();
 
-        List<Book> response = RestAssured.given().urlEncodingEnabled(false)
+        List<?> response = RestAssured.given().urlEncodingEnabled(false)
                 .get("/books")
                 .then()
                 .log()
@@ -141,6 +134,6 @@ public class BookAPIFT extends BaseFT {
                 .body()
                 .as(Boolean.class);
 
-        Assert.assertEquals(true, response);
+        Assert.assertEquals(true, response); //es mejor mirar directamente desde el repositiorio
     }
 }

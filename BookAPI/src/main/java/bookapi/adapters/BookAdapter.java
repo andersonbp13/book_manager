@@ -12,9 +12,10 @@ public class BookAdapter {
                 bookDTO.getImageURL(),
                 bookDTO.getGenre());
 
-        if(bookDTO.getId() != null) {
+        if(bookDTO.getId() != null) {   //no es necesario
             book.setId(bookDTO.getId());
         }
+
         return book;
     }
 

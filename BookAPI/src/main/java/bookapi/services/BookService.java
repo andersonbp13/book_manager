@@ -85,7 +85,7 @@ public class BookService {
 
         bookRepository.delete(book.get());
 
-        if(bookRepository.existsById(id)) {
+        if(bookRepository.existsById(id)) {  //sobra, el metodo puede ser void y la validacion se puede hacer directamente en la clase test
             return false;
         }
         return true;
