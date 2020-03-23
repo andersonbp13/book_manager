@@ -50,7 +50,7 @@ class _BookActivityState extends State<BookActivity> {
               return Scaffold(
                   appBar: AppBar(
                     leading: BackButton(
-                      onPressed: _goBack,
+                      //onPressed: _goBack,
                       color: widget.themeProperties.colorMap["iconLight"],
                     ),
                     bottomOpacity: 0.5,
@@ -94,7 +94,7 @@ class _BookActivityState extends State<BookActivity> {
             return Scaffold(
                 appBar: AppBar(
                   leading: BackButton(
-                    onPressed: _goBack,
+                    //onPressed: _goBack,
                     color: widget.themeProperties.colorMap["iconLight"],
                   ),
                   title: Row(
@@ -232,7 +232,7 @@ class _BookActivityState extends State<BookActivity> {
             return Scaffold(
                 appBar: AppBar(
                   leading: BackButton(
-                    onPressed: _goBack,
+                    //onPressed: _goBack,
                     color: widget.themeProperties.colorMap["iconLight"],
                   ),
                   bottomOpacity: 0.5,

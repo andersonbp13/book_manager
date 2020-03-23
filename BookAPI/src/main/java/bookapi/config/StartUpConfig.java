@@ -20,7 +20,7 @@ public class StartUpConfig {
     private List<String> imageURLs;
     private List<String> genderList;
 
-   /* @Bean
+    @Bean
     public CommandLineRunner demo(BookRepository bookRepository) {
         return (args) -> {
             authorList = new ArrayList<String>();
@@ -31,7 +31,7 @@ public class StartUpConfig {
             CreateGenders();
             CreateBooks(bookRepository);
         };
-    }*/
+    }
 
     private void CreateGenders() {
         genderList.add("Horror");

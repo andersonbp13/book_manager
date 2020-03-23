@@ -1,0 +1,11 @@
+
+ksquid:S00100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šóãÚüÿÿÿÿ
+O
+squid:S106J"9Replace this use of System.out or System.err by a logger.(Éî¢
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(°§Óºûÿÿÿÿ
+ksquid:S00100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞŠÌÚúÿÿÿÿ
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‹ÁË¾
+ksquid:S001009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı­¶Ùıÿÿÿÿ
+Isquid:S1611"2Remove the parentheses around the "args" parameter(£Ù€ò
+fsquid:S00100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç›Á¿
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(òš—Ä

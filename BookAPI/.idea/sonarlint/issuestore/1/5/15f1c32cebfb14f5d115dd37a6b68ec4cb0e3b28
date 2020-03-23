@@ -1,0 +1,6 @@
+
+Ssquid:S3655E"7Call "Optional#isPresent()" before accessing the value.(²Þèâýÿÿÿÿ
+Xsquid:S1126X"AReplace this if-then-else statement by a single return statement.(êìÕÇ
+‡"squid:ClassVariableVisibilityCheck"ZMake bookRepository a static final constant or non-public and provide accessors if needed.(¼ˆï
+Jsquid:S3655V"3Call "book.isPresent()" before accessing the value.(«·ŽÌ
+qsquid:S1192G"ZDefine a constant instead of duplicating this literal "The book was not uploaded" 6 times.(˜¤÷ð

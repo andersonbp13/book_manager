@@ -37,7 +37,7 @@ class _FormActivityState extends State<FormActivity> {
         child: Scaffold(
           appBar: AppBar(
             leading: BackButton(
-              onPressed: _goBack,
+              //onPressed: _goBack,
               color: widget.themeProperties.colorMap["iconLight"],
             ),
             title: Row(
